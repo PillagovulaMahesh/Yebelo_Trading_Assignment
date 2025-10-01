@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌐 Global Reset & Defaults */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb; /* Light background */
+  color: #111827; /* Neutral text */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 🌙 Dark Mode */
+:root {
+  --color-bg-dark: #111827;
+  --color-text-dark: #f9fafb;
+}
+
+body.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+/* 🎨 Reusable Classes */
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6;
+}
+
+/* 🖼️ Chart Containers */
+.chart-container {
+  @apply bg-white dark:bg-gray-900 rounded-2xl shadow p-4;
+}
