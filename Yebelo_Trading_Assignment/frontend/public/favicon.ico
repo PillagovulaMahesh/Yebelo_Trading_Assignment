@@ -1,0 +1,5 @@
+# Install ImageMagick if not installed
+sudo apt-get install imagemagick -y
+
+# Generate a simple blue square favicon.ico
+convert -size 32x32 canvas:blue public/favicon.ico
