@@ -1,0 +1,23 @@
+# Use official Rust image
+FROM rust:1.72
+
+# Create app directory
+WORKDIR /usr/src/backend
+
+# Copy Cargo.toml and Cargo.lock first (for caching dependencies)
+COPY backend/Cargo.toml backend/Cargo.lock ./
+
+# Fetch dependencies
+RUN cargo fetch
+
+# Copy the source code
+COPY backend/src ./src
+
+# Build the backend in release mode
+RUN cargo build --release
+
+# Expose any port if your backend serves HTTP/WebSocket (optional)
+EXPOSE 8081
+
+# Run the backend
+CMD ["./target/release/backend"]
