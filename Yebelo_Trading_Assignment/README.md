@@ -1,12 +1,3 @@
-#!/bin/bash
-
-cat << 'EOF' > README.md
-# 📊 Yebelo Assignment – Fullstack Crypto Trading Analytics System
-
-This repository contains my submission for the **Yebelo Technologies Fullstack Developer Assignment**.  
-The project demonstrates my ability to rapidly learn and implement **new technologies** using **AI-assisted development**.
-
----
 
 ## 🚀 Tech Stack
 
@@ -69,3 +60,4 @@ python ingest.py
 cd ../frontend
 npm install
 npm run dev
+
